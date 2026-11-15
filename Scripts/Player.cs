@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using SpaceExploration101.Scripts;
 
 public partial class Player : CharacterBody2D
 {
@@ -16,11 +17,14 @@ public partial class Player : CharacterBody2D
 	[ExportCategory("Nodes")] 
 	[Export]
 	public AnimatedSprite2D Sprite;
+
+	public int Hunger = 100;
+	public int Thirst = 100;
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		
+		GameManager.Instance.Player = this;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -61,5 +65,15 @@ public partial class Player : CharacterBody2D
 		Velocity *= Friction;
 
 		MoveAndSlide();
+	}
+
+	public void On_Hunger_Timeout()
+	{
+		Hunger -= 1;
+	}
+
+	public void On_Thirst_Timeout()
+	{
+		Thirst -= 1;
 	}
 }

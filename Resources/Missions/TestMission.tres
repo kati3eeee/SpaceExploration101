@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Mission" format=3 uid="uid://bibfdrhahvgro"]
+
+[ext_resource type="Script" uid="uid://ckd0kwqddqd01" path="res://Scripts/Resources/Mission.cs" id="1_jy0x8"]
+
+[resource]
+script = ExtResource("1_jy0x8")
+Name = "Make the game work"
+DestinationDistance = 9000.0
+metadata/_custom_type_script = "uid://ckd0kwqddqd01"

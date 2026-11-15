@@ -30,6 +30,7 @@ public partial class Ship : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		MyData.Mass = 0;
 		_tileMapSize = ShipTiles.GetUsedRect().Size.X * 32;
 		
 		_currentSpaceParallax = SpaceParallaxScene.Instantiate<TileMapLayer>();
@@ -43,6 +44,8 @@ public partial class Ship : Node2D
 				{
 					_engine = engine;
 				}
+				
+				MyData.Mass += component.Mass;
 			}
 		}
 		
@@ -57,13 +60,15 @@ public partial class Ship : Node2D
 				_engine._isConnectedToFuel = true;
 			}
 		}
+
+		GameManager.Instance.Ship = this;
 	}
 
 	public void CalculateCurrentSpeed()
 	{
 		if (_engine?._isConnectedToFuel == true)
 		{
-			CurrentSpeed = _engine.Force;
+			CurrentSpeed = _engine.Force / MyData.Mass;
 		}
 	}
 

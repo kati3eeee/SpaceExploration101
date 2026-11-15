@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using Godot;
 
 namespace SpaceExploration101.Scripts;
@@ -12,6 +13,7 @@ public partial class Mission(
     string Name { get; set; } = name;
 
     [Export] 
+    [UIHint("In meters")]
     public float DestinationDistance { get; set; } = destinationDistance;
 
     public Mission() : this("", 0.0f) { }

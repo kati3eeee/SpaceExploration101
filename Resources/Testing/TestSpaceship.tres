@@ -27,7 +27,7 @@ Cost = 154342.0
 Connections = Dictionary[int, Object]({
 1: SubResource("Resource_f5dtn")
 })
-Mass = 100000.0
+Mass = 1950.0
 metadata/_custom_type_script = "uid://wdq6wgejygni"
 
 [resource]
