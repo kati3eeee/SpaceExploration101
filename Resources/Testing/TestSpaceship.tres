@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="SpaceshipData" format=3 uid="uid://duf45l2loedxt"]
+
+[ext_resource type="Script" uid="uid://cyfivffspqvqb" path="res://Scripts/Resources/TankComponent.cs" id="1_7gev8"]
+[ext_resource type="Script" uid="uid://dtiksy7md8ff6" path="res://Scripts/Resources/SpaceshipData.cs" id="1_xpwaf"]
+[ext_resource type="Resource" uid="uid://cwx121kyktygj" path="res://Resources/Fuel/AJ10Fuel.tres" id="2_vp5gq"]
+[ext_resource type="Script" uid="uid://wdq6wgejygni" path="res://Scripts/Resources/EngineComponent.cs" id="3_ijdea"]
+
+[sub_resource type="Resource" id="Resource_f5dtn"]
+script = ExtResource("1_7gev8")
+Resource = ExtResource("2_vp5gq")
+MaxCapacity = 500.0
+CurrentCapacity = 500.0
+Owner = NodePath(".")
+Name = "MMH/NTO + Oxidizer"
+Cost = 1000.0
+Connections = null
+Mass = 500.0
+metadata/_custom_type_script = "uid://cyfivffspqvqb"
+
+[sub_resource type="Resource" id="Resource_row4w"]
+script = ExtResource("3_ijdea")
+Force = 26689.0
+Fuel = ExtResource("2_vp5gq")
+Owner = NodePath(".")
+Name = "AJ10"
+Cost = 154342.0
+Connections = Dictionary[int, Object]({
+1: SubResource("Resource_f5dtn")
+})
+Mass = 100000.0
+metadata/_custom_type_script = "uid://wdq6wgejygni"
+
+[resource]
+script = ExtResource("1_xpwaf")
+Components = Array[Object]([SubResource("Resource_row4w"), SubResource("Resource_f5dtn")])
+metadata/_custom_type_script = "uid://dtiksy7md8ff6"

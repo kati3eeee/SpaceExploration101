@@ -37,12 +37,26 @@ public partial class Player : CharacterBody2D
 		{
 			Velocity += direction * Acceleration * (float)delta;
 			Velocity = new Vector2(Mathf.Min(Velocity.X, MaxSpeed),  Mathf.Min(Velocity.Y, MaxSpeed));
+			
+			Sprite.FlipH = direction.X < 0;
 		}
 
-		Sprite.Play((Velocity.X < 5f && Velocity.X > -5f) // Velocity will never equal 0 after movement so just use these ranges to check if it's basically 0
-		            && (Velocity.Y < 5f && Velocity.Y > -5f) 
-			? "idle" : "float");
-		Sprite.FlipH = direction.X < 0;
+		if ((Velocity.X < 5f && Velocity.X > -5f)
+		    && (Velocity.Y < 5f && Velocity.Y > -5f)) // Velocity will never equal 0 after movement so just use these ranges to check if it's basically 0
+		{
+			if (IsOnFloor())
+			{
+				Sprite.Play("ground_idle");
+			}
+			else
+			{
+				Sprite.Play("float_idle");
+			}
+		}
+		else
+		{
+			Sprite.Play("float");
+		}
 
 		Velocity *= Friction;
 

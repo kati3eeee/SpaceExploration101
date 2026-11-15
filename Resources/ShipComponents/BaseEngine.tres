@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EngineComponent" format=3 uid="uid://cqobm8ja2fgfl"]
+
+[ext_resource type="Resource" uid="uid://cwx121kyktygj" path="res://Resources/Fuel/AJ10Fuel.tres" id="1_54r0u"]
+[ext_resource type="Script" uid="uid://wdq6wgejygni" path="res://Scripts/Resources/EngineComponent.cs" id="1_l4p2l"]
+
+[resource]
+script = ExtResource("1_l4p2l")
+Force = 26689.0
+Fuel = ExtResource("1_54r0u")
+Owner = null
+Name = "AJ10"
+Cost = 154342.0
+Connections = Dictionary[int, Object]({})
+Mass = 100000.0
+metadata/_custom_type_script = "uid://wdq6wgejygni"

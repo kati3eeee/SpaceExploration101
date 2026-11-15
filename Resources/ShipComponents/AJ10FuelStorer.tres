@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TankComponent" format=3 uid="uid://b4s0iuulh3w7i"]
+
+[ext_resource type="Script" uid="uid://cyfivffspqvqb" path="res://Scripts/Resources/TankComponent.cs" id="1_p0mmf"]
+
+[resource]
+script = ExtResource("1_p0mmf")
+Connections = null
+metadata/_custom_type_script = "uid://cyfivffspqvqb"

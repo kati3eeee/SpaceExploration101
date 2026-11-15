@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Fuel" format=3 uid="uid://cwx121kyktygj"]
+
+[ext_resource type="Script" uid="uid://cf43w1ql4mf2q" path="res://Scripts/Resources/Fuel.cs" id="1_psrjb"]
+
+[resource]
+script = ExtResource("1_psrjb")
+Name = "MMH/NTO"
+metadata/_custom_type_script = "uid://cf43w1ql4mf2q"
