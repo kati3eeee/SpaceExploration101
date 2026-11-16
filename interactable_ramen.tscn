@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b85i0w87rysl6"]
+
+[ext_resource type="Script" uid="uid://cst8ni7h3gkkd" path="res://Scripts/InteractableRamen.cs" id="1_7pt73"]
+[ext_resource type="Texture2D" uid="uid://ha4xoejep3gx" path="res://Sprites/Tilesets/large_tile_sheet_nasa.png" id="2_cc0uj"]
+
+[node name="interactable ramen" type="Node2D" unique_id=698795152 node_paths=PackedStringArray("ramenSprite")]
+script = ExtResource("1_7pt73")
+ramenSprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=484255323]
+texture = ExtResource("2_cc0uj")
+region_enabled = true
+region_rect = Rect2(96.41638, 320.13403, 23.511993, 31.349335)
